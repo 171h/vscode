@@ -3,9 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+/*
+ * FIXES https://github.com/microsoft/vscode-copilot/issues/8127
+ * REOPENS https://github.com/microsoft/vscode-internalbacklog/issues/4298
 .monaco-workbench .zone-widget.inline-chat-widget {
 	z-index: 3;
-}
+} */
 
 .monaco-workbench .zone-widget.inline-chat-widget .interactive-session {
 	max-width: unset;
@@ -18,6 +21,7 @@
 	box-shadow: 0 2px 4px 0 var(--vscode-widget-shadow);
 	background: var(--vscode-inlineChat-background);
 	padding-top: 3px;
+	position: relative;
 }
 
 .monaco-workbench .inline-chat .chat-widget .interactive-session .interactive-input-part {
@@ -69,6 +73,10 @@
 .monaco-workbench .inline-chat .chat-widget .interactive-session .interactive-list .interactive-item-container.minimal > .header {
 	top: 5px;
 	right: 10px;
+	display: none;
+}
+
+.monaco-workbench .inline-chat .chat-widget .interactive-session .interactive-list .interactive-item-container.minimal > .chat-footer-toolbar {
 	display: none;
 }
 
